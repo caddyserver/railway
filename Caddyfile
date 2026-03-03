@@ -2,6 +2,6 @@
 	auto_https off
 }
 
-:$PORT {
+:{$PORT} {
 	respond "Hello from Caddy on Railway!"
 }
