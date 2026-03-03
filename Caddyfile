@@ -1,0 +1,7 @@
+{
+	auto_https off
+}
+
+:$PORT {
+	respond "Hello from Caddy on Railway!"
+}
