@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -eu
 
 which xcaddy || go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 
