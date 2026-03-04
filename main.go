@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 	"os/exec"
@@ -21,8 +20,8 @@ func main() {
 	}
 
 	// remaining args are flags, usually to add plugins
-	plugins := strings.Fields(os.Getenv("CADDY_PLUGINS"))
-	for _, p := range plugins {
+	plugins := strings.FieldsSeq(os.Getenv("CADDY_PLUGINS"))
+	for p := range plugins {
 		args = append(args, "--with", p)
 	}
 
@@ -33,9 +32,9 @@ func main() {
 	// print some useful debug info to the logs
 	log.Println("Build successful")
 
+	run("./caddy", "environ")
 	run("./caddy", "build-info")
 	run("./caddy", "list-modules")
-	run("./caddy", "environ")
 }
 
 // run runs the command at name, with the given arguments.
@@ -46,10 +45,10 @@ func run(name string, args ...string) {
 	cmd.Stderr = os.Stderr
 	log.Println("EXEC", cmd.Args)
 	if err := cmd.Run(); err != nil {
+		log.Printf("command %v failed: %v\n", cmd.Args, err)
 		if exitErr, ok := err.(*exec.ExitError); ok {
 			os.Exit(exitErr.ExitCode())
 		}
-		fmt.Fprintf(os.Stderr, "command %v failed: %v\n", cmd.Args, err)
 		os.Exit(1)
 	}
 }
