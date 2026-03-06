@@ -1,2 +1,4 @@
-# Either set your Caddyfile in the Railway UI, or edit this file in your own repo.
-{$CADDYFILE}
+:8080
+
+root /www
+file_server

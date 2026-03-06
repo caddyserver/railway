@@ -1,0 +1,10 @@
+FROM caddy:builder AS builder
+
+# Example command; replace with plugins you actually require
+RUN xcaddy build \
+    --with github.com/caddyserver/nginx-adapter \
+    --with github.com/hairyhenderson/caddy-teapot-module@v0.0.3-0
+
+FROM caddy:alpine
+
+COPY --from=builder /usr/bin/caddy /usr/bin/caddy
