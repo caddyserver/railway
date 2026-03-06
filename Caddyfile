@@ -1,3 +1,4 @@
 :8080
 
-respond "Hello from Caddy on Railway!"
+root /www
+file_server
