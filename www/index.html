@@ -339,52 +339,12 @@
 				<a href="https://caddyserver.com">Caddy</a> is ready to serve your site on <a href="https://railway.com">Railway</a>!
 			</p>
 			<ol>
+				<li>Add or remove Caddy plugins by using the <code>CADDY_PLUGINS</code> variable in your Railway project.</li>
 				<li>"Eject" (or fork) this template into your own repository.</li>
-				<li>If you need Caddy plugins, replace <code>Dockerfile</code> with <code>Dockerfile.plugins</code> and </li>
+				<li>You can serve a static site by replacing the contents of this "www" folder.</li>
+				<li>Change the Caddy config by editing the <code>Caddyfile</code> and pushing.</li>
+				<li>Learn more about using this template from the <a href="https://github.com/caddyserver/caddy-railway">README</a>.</li>
 			</ol>
-			<h2>If that worked 🥳</h2>
-			<p>
-				Awesome! You won't have to look at this slanted page anymore.
-			</p>
-			<!-- <p>
-				Remember, Caddy can do a lot more than serve static files. It's also a powerful reverse proxy and
-				application platform. You can use the Caddyfile to enable any other features you need. Or you could use
-				Caddy's API to configure it programmatically.
-			</p>
-			<p>
-				Everything you need to know is either in the <a href="https://caddyserver.com/docs/">📖 Caddy
-					documentation</a> or the manual for your OS/platform. Have fun!
-			</p>
-
-			<h2>If that didn't work 😶</h2>
-			<p>
-				It's okay, you can fix it! First check the following things:
-			</p>
-			<ul>
-				<li>Service status: <code>systemctl status caddy</code></li>
-				<li>Logs: <code>journalctl --no-pager -u caddy</code></li>
-				<li>Are your site's files readable by the caddy user and group? <code>ls -la /var/www/html</code></li>
-				<li>Is the caddy home directory writeable? <code>ls -la /var/lib/caddy</code></li>
-				<li>Ensure your domain's A and/or AAAA records point to your machine's public IP address:
-					<code>dig example.com</code></li>
-				<li>Are your ports 80 and 443 externally reachable, and is Caddy able to bind to them? Check your
-					firewalls, port forwarding, and other network configuration.</li>
-			</ul>
-			<p>
-				<b class="warn">WAIT!</b> Before trying again, switch to <a
-					href="https://letsencrypt.org/docs/staging-environment/">Let's Encrypt's staging environment</a> to
-				avoid being accidentally <a href="https://letsencrypt.org/docs/rate-limits/">rate limited</a>. Once you
-				get everything else working, it's safe to switch back.
-			</p>
-			<p>
-				Depending on your DNS provider, it may take a while for the DNS records to propagate. Even when
-				everything is configured properly, automated challenges to obtain TLS certificates usually take several
-				seconds, but may take up to several minutes or hours.
-			<p>
-				If you still need help, we have a <a href="https://caddy.community/">great community</a>! First <a
-					href="https://caddy.community/search">try a search</a>, and if your question is original, go ahead
-				and ask it! Remember to pay it forward and help others too. 😁
-			</p> -->
 			<p>
 				Visit Caddy on:
 				<b><a href="https://github.com/caddyserver/caddy" title="Caddy on GitHub">GitHub</a></b>
