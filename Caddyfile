@@ -1,3 +1,8 @@
+# This is your Caddy configuration. This default config
+# opens a port and serves a static site from the www folder.
+# Edit this file according to your needs.
+
+# Remember, Railway terminates TLS before it gets to Caddy.
 :8080
 
 root /www
