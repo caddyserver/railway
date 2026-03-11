@@ -2,7 +2,7 @@ FROM caddy:builder AS builder
 
 ARG CADDY_PLUGINS=
 
-COPY build.sh /build.sh
+COPY --chmod=755 build.sh /build.sh
 RUN sh /build.sh
 
 FROM caddy:alpine
