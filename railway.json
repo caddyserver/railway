@@ -2,6 +2,6 @@
 	"$schema": "https://railway.com/railway.schema.json",
 	"deploy": {
 		"healthcheckPath": "/",
-		"restartPolicyType": "ON_FAILURE"
+		"restartPolicyType": "sent"
 	}
 }
